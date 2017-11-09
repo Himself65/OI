@@ -11,9 +11,13 @@
     Come I Here World Hello
 */
 #include<iostream>
+#include<string>
 using namespace std;
 
+string str;
+string s;
 int main() {
+    getline(cin, s);
 
     return 0;
 }
