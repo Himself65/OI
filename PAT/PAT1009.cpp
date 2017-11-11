@@ -12,12 +12,42 @@
 */
 #include<iostream>
 #include<string>
+#include<stack>
 using namespace std;
 
-string str;
-string s;
-int main() {
-    getline(cin, s);
+string shit;
+stack<string> s;
 
+inline void solve() 
+{
+    shit += " #";
+    string temp;
+    for (int i = 0;; i++)
+    {
+        if(shit[i]==' ')
+        {
+            s.push(temp);
+            temp.clear();
+            continue;
+        }
+        else if(shit[i]=='#')
+            break;
+        temp += shit[i];
+    }
+
+    while(!s.empty())
+    {
+        cout << s.top();
+        if(s.size()!= 1)
+            cout << " ";
+        s.pop();
+    }
+}
+
+int main(){
+    getline(cin, shit);
+    solve();
+    // cout << shit;
+    // system("pause");
     return 0;
 }
