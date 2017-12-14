@@ -25,9 +25,9 @@ namespace P2216 {
             {
                 long maxt = -0x7f7f7f7f;
                 long mint = 0x7f7f7f7f;
-                for (int k = 0; k < n; k++)
+                for (int k = 0; k <= n; k++)
                 {
-                    for (int l = 0; l < n; l++)
+                    for (int l = 0; l <= n; l++)
                     {
                         long a = matrix[k + i][l + j];
                         maxt = P2216::max(a, maxt);
@@ -55,5 +55,6 @@ int main() {
     }
     P2216::solve();
     printf("%ld\n", d);
+    system("pause");
     return 0;
 }
