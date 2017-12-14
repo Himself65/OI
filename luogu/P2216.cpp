@@ -1,5 +1,6 @@
 #include<cstring>
 #include<cstdio>
+#include<iostream>
 #include<queue>
 #include<deque>
 using namespace std;
@@ -189,5 +190,6 @@ int main() {
         }  
     }
     printf("%d", ans);
+    system("pause");
     return 0;
 }
