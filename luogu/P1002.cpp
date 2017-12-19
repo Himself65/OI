@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstdio>
+
 #define ll long long
 ll a, b, n, m, l[22][22], map[23][23];
 using namespace std;
@@ -30,6 +30,6 @@ int main()
                 l[i][j] = 0;
         }
     }
-    printf("%lld", l[n + 1][m + 1]);
+    cout << l[n + 1][m + 1];
     return 0;
 }
