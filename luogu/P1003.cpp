@@ -1,29 +1,3 @@
-/*
-只能过一般数据的代码（未经过测试，可能有bug）
-#include<iostream>
-using namespace std;
-const int maxn = 105;
-int n;
-int floor[maxn][maxn];
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin >> n;
-    for (int i = 1; i <= n; i++)
-    {
-        int a, b, g, k;
-        cin >> a >> b >> g >> k;
-        for (int m = a; m <= g; m++)
-            for (int n = b; n <= k; n++)
-            {
-                floor[m][n] = i;
-            }
-    }
-    int x, y;
-    cout << floor[x][y];
-    return 0;
-}
-*/
 #include<iostream>
 using namespace std;
 const int maxn = 10005;
