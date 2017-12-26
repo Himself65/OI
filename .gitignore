@@ -4,3 +4,4 @@ _test/*
 .DS_Store
 */.DS_Store
 */*/.DS_Store
+luogu/P1222.cpp
