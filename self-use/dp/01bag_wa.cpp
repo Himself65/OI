@@ -1,3 +1,4 @@
+//此代码只适用于n~10的情况，否则会超时
 #include <iostream>
 #include <ctime>
 #include <cstdio>
@@ -18,19 +19,16 @@ inline int max(int a, int b)
         return b;
 }
 
-inline void solve()
+inline int solve(int i, int j)
 {
-    for (int i = n; i > 0; i--)
-    {
-        for (int j = 0; j <= W; j++)
-        {
-            if (j < w[i])
-                dp[i][j] = dp[i + 1][j];
-            else
-                dp[i][j] = max(dp[i + 1][j], dp[i + 1][j - w[i]] + v[i]);
-        }
-    }
-    cout << dp[1][W];
+    int res;
+    if (i == n)
+        return 0;
+    else if (j < w[i])
+        res = solve(i + 1, j);
+    else
+        res = max(solve(i + 1, j), solve(i + 1, j - w[i]) + v[i]);
+    return res;
 }
 
 inline void display()
@@ -63,7 +61,7 @@ int main()
     {
         cin >> w[i] >> v[i];
     }
-    solve();
+    cout << solve(1, W) << endl;
     cout << endl
          << clock() - before << "ms" << endl;
     // display();
