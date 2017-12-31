@@ -1,4 +1,4 @@
-//
+// 求有向无环图某点到叶节点的路径数
 
 #include <iostream>
 #include <queue>
