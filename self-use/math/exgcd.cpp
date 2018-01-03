@@ -17,6 +17,6 @@ int exgcd(int a, int b, int &x, int &y)
 
 int main() 
 {
-
+    
     return 0;
 }
