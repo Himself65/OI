@@ -3,9 +3,9 @@
 #include <cstdio>
 using namespace std;
 int x[10];
-void permutation1(int n)
+void solve()
 {
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= 9; i++)
     {
         x[i] = i;
     }
@@ -23,6 +23,6 @@ void permutation1(int n)
 
 int main()
 {
-    permutation1(9);
+    solve();
     return 0;
 }
