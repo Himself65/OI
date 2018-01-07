@@ -11,7 +11,7 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-inline uint max(uint a, uint b)
+inline ll max(ll a, ll b)
 {
     return a > b ? a : b;
 }
