@@ -6,3 +6,4 @@ _test/
 */*/.DS_Store
 luogu/P1222.cpp
 .out/
+.local/
