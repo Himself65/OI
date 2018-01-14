@@ -66,6 +66,6 @@ int main()
         map[tx][ty].wall = true;
     }
     bfs();
-    cout << ans;
+    cout << ans; //答案
     return 0;
 }
