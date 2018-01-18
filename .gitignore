@@ -4,6 +4,11 @@ _test/
 .DS_Store
 */.DS_Store
 */*/.DS_Store
-luogu/P1222.cpp
 .out/
 .local/
+# luogu中写了很久还没写好的题 
+
+luogu/P1222.cpp
+luogu/P2187.cpp
+
+# end
