@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int t, m;
-const int maxn = 10000 + 5;
+const int maxn = 1000000 + 5;
 typedef long long ll;
 
 ll f[maxn];
