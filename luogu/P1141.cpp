@@ -1,80 +1,53 @@
+#include <cstdio>
 #include <cstring>
 #include <iostream>
 #include <queue>
 using namespace std;
-typedef long long ll;
-const int maxn = 1005;
-const int mx[] = {1, 0, 0, -1};
-const int my[] = {0, 1, -1, 0};
-struct Node
+const int maxn = 1000 + 5;
+int a[maxn][maxn];
+int res[maxn][maxn];
+int lin[1000001][2];
+int n, m, pl;
+int mv[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+void dfs(int x, int y)
 {
-    int x, y;
-    bool v;
-    Node() : v(false) {}
-};
-Node map[maxn][maxn];
-bool vis[maxn][maxn];
-int mem[maxn][maxn];
-int n, m;
-inline void solve()
-{
-    for (int i = 1; i <= n; i++)
+    pl++;
+    lin[pl][0] = x;
+    lin[pl][1] = y;
+    res[x][y] = 1;
+    for (int i = 0; i <= 3; i++)
     {
-        for (int j = 1; j <= n; j++)
-        {
-            map[i][j].x = i;
-            map[i][j].y = j;
-        }
-    }
-    while (m--)
-    {
-        memset(vis, false, sizeof(vis));
-        int x0, y0;
-        cin >> x0 >> y0;
-        if(mem[x0][y0]>0)
-        {
-            cout << mem[x0][y0] << endl;
+        int u = x + mv[i][0];
+        int v = y + mv[i][1];
+        if (u < 1 || u > n || v < 1 || v > n)
             continue;
-        }
-        int ans = 0;
-        vis[x0][y0] = true;
-        queue<Node> q;
-        q.push(map[x0][y0]);
-        while (!q.empty())
-        {
-            Node &node = q.front();
-            q.pop();
-            ans++;
-            for (int i = 0; i < 4; i++)
-            {
-                Node &t = map[node.x + mx[i]][node.y + my[i]];
-                if (t.x < 1 || t.x > n || t.y < 1 || t.y > n)
-                    continue;
-                if ((t.v ^ node.v) == 0)
-                    continue;
-                if (vis[t.x][t.y])
-                    continue;
-                vis[t.x][t.y] = true;
-                q.push(t);
-            }
-        }
-        cout << ans << endl;
-        mem[x0][y0] = ans;
+        else if (res[u][v] > 0)
+            continue;
+        else if (a[u][v] == a[x][y])
+            continue;
+        dfs(u, v);
     }
 }
-
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
     cin >> n >> m;
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= n; j++)
+            scanf("%1d", &a[i][j]);
+    while (m--)
+    {
+        pl = 0;
+        int x, y;
+        cin >> x >> y;
+        if (res[x][y] > 0)
+            cout << res[x][y] << endl;
+        else
         {
-            char ch;
-            cin >> ch;
-            map[i][j].v = ch - '0';
+            dfs(x, y);
+            for (int j = 1; j <= pl; j++)
+                res[lin[j][0]][lin[j][1]] = pl;
+            cout << pl << endl;
         }
-    solve();
+    }
     return 0;
 }
