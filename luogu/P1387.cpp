@@ -20,6 +20,8 @@ const int maxn = 100 + 5;
 int a[maxn][maxn];
 int f[maxn][maxn];
 int n, m;
+#define MAX(a,b) (a > b ? a : b)
+#define MIN(a,b) (a < b ? a : b)
 inline int max(int a, int b)
 {
     return a > b ? a : b;
