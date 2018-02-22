@@ -21,8 +21,8 @@ inline void push_up_sum(ll p)
 
 inline void build(ll l, ll r, ll p)
 {
-    tag[p] = 0;
-    if (l == r)
+    tag[p] = 0; // 这个其实不用赋值也可以，因为在全局变量默认为0
+    if (l == r) // 达到子节点
     {
         ans[p] = a[l];
         return;
@@ -37,7 +37,7 @@ inline void build(ll l, ll r, ll p)
 }
 inline void f(ll l, ll r, ll p, ll k)
 {
-    tag[p] += k;
+    tag[p] += k;    
     ans[p] += k * (r - l + 1);
 }
 inline void push_down(ll l, ll r, ll p)
