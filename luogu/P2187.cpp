@@ -15,7 +15,7 @@ int main()
     while (m--)
     {
         char x, y;
-        scanf("%c%c ", &x, &y);
+        scanf(" %c%c", &x, &y);
         cantnear[x - 'a'][y - 'a'] = cantnear[y - 'a'][x - 'a'] = 1;
     } // 输入
     // DP
