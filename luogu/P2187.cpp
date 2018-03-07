@@ -1,58 +1,33 @@
-#include<iostream>
-#include<cstring>
-#include<cstdio>
-#include<string>
-#include<map>
-#define LOCAL
+#include <algorithm>
+#include <cstdio>
 using namespace std;
+const int maxn = 100000 + 5;
+int f[maxn], g[maxn];
+int last[30], forbid[30][30];
+char b[maxn];
 int n, m;
-string str;
-int ans = 0;
-map<char, char> mp;
-inline bool can(char a,char b) {
-    if (mp.find(a) == mp.end() || mp.find(b) == mp.end())
-        return true;
-    return false;
-}
-
-inline void solve(char a, char b) {
-    for (int i = 0; i < str.length(); i++) {
-        int j = i + 1;
-        if ((str[i] == a && str[j] == b) || (str[i] == b && str[j] == a))
-        {
-            ans++;
-        //    str.erase(i);
-        //   printf("%s\n", str.c_str());
-        }
-    }
-}
-
-int main() {
-#ifdef LOCAL
-    freopen("debug\\P1287.in", "r", stdin);
-    freopen("debug\\P1287.out", "w", stdout);
-#endif
+int main()
+{
     scanf("%d", &n);
-    cin >> str;
+    scanf("%s", b + 1);
+    for (int i = 1; i <= n; i++)
+        f[i] = b[i] - 'a';
     scanf("%d", &m);
-    for (int i = 0; i < m; i++) {
-        char t1;
-        cin >> t1;
-        char t2;
-        cin >> t2;
-        if (can(t1, t2))
-        {
-            solve(t1, t2);
-            mp[t1] = t2;
-        }
+    while (m--)
+    {
+        scanf("%s", b);
+        forbid[b[0] - 'a'][b[1] - 'a'] = forbid[b[1] - 'a'][b[0] - 'a'] = 1;
     }
-    printf("%d", ans);
-#ifdef LOCAL
-    fclose(stdin);
-    fclose(stdout);
-#endif
-//    system("pause");
+    int ans = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        g[i] = 1;
+        for (int j = 0; j < 26; j++)
+            if (!forbid[j][f[i]])
+                g[i] = max(g[i], last[j] + 1);
+        last[f[i]] = max(last[f[i]], g[i]);
+        ans = max(ans, g[i]);
+    }
+    printf("%d", n - ans);
     return 0;
 }
-
-// printf("%d", &x);
