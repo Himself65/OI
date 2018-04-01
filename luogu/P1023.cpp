@@ -27,18 +27,17 @@ int main()
 {
     INIT_CIN; // std::cin的优化
     cin >> prize;
-    cin >> def >> sell;
+    int a, b;
+    int d;
+    int ans = 0;
     while (true)
     {
-        int a, b;
         cin >> a >> b;
         if (a == -1 && b == -1)
             break;
-        int temp = ans;
-        ans = max((a - def + (a < prize ? a : -a)) * b, ans);
-        if (temp < ans)
-        
+        int p = (prize - a) * b;
+        ans = max(p, ans);
     }
-    cin >> one;
+    cin >> d;
     return 0;
 }
