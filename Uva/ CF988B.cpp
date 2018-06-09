@@ -23,7 +23,7 @@ int main()
             cout << "NO";
             return 0;
         }
-    cout << "YES";
+    cout << "YES" << endl;
     for (int i = 0; i < n; i++)
         cout << s[i] << endl;
     return 0;
