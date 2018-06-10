@@ -20,7 +20,7 @@ typedef unsigned long long ull;
 
 int main()
 {
-    INIT_CIN;   // std::cin的优化
+    INIT_CIN; // std::cin的优化
 
     return 0;
 }
