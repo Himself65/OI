@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+inline int abs(int a) { return a > 0 ? a : -a; }
 using namespace std;
 int main()
 {
