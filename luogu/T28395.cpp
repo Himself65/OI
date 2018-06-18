@@ -43,8 +43,6 @@ int main()
         }
         c[i] = needed * 0.2;
         qzh[i] = qzh[i - 1] - ct[i] + c[i];
-        // printf("%lf %lf\n", b[i], c[i]);
-        ans += a[i];
     }
     printf("%lf", qzh[n] * 0.2);
     return 0;
