@@ -1,22 +1,22 @@
 #include <iostream>
 
-int exgcd(int a, int b, int &x, int &y)
+int exgcd(int a, int b, int &d, int &x, int &y)
 {
-    if(b==0)
+    if (!b)
     {
+        d = a;
         x = 1;
         y = 0;
-        return a;
     }
-    int r = exgcd(b, a % b, x, y);
-    int t = x;
-    x = y;
-    y = t - a / b * y;
-    return r;
+    else
+    {
+        exgcd(b, a % b, d, y, x);
+        y -= x * (a / b);
+    }
 }
 
-int main() 
+int main()
 {
-    
+
     return 0;
 }
