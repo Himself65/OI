@@ -20,11 +20,10 @@ const int maxn = 100 + 5;
 int n, s, ans;
 inline bool isReverse(int num, int k)
 {
-    int i = 0, j = 0, point = 0, ch[maxn] = {0};
+    int point = 0, ch[maxn] = {0};
     while (num)
         ch[point++] = num % k, num /= k;
-    j = point - 1;
-    while (i < j)
+    for (int i = 0, j = point - 1; i < j;)
         if (ch[i++] != ch[j--])
             return false;
     return true;
@@ -33,9 +32,8 @@ int main()
 {
     INIT_CIN; // std::cin的优化
     cin >> n >> s;
-    for (int i = s + 1; ans < n; i++)
+    for (int i = s + 1, cnt = 0; ans < n; i++)
     {
-        int cnt = 0;
         for (int j = 2; j <= 10 && cnt < 2; j++)
             if (isReverse(i, j))
                 cnt++;
