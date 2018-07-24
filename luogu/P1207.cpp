@@ -23,8 +23,8 @@ inline bool isReverse(int num, int k)
     int point = 0, ch[maxn] = {0};
     while (num)
         ch[point++] = num % k, num /= k;
-    for (int i = 0, j = point - 1; i < j;)
-        if (ch[i++] != ch[j--])
+    for (int i = 0, j = point - 1; i < j; i++, j--)
+        if (ch[i] != ch[j])
             return false;
     return true;
 }
@@ -32,7 +32,7 @@ int main()
 {
     INIT_CIN; // std::cin的优化
     cin >> n >> s;
-    for (int i = s + 1, cnt = 0; ans < n; i++)
+    for (int i = s + 1, cnt = 0; ans < n; i++, cnt = 0)
     {
         for (int j = 2; j <= 10 && cnt < 2; j++)
             if (isReverse(i, j))
