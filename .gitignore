@@ -2,6 +2,7 @@ _test/
 */*-TEXT.cpp
 .*/
 .DS_Store
+._.DS_Store
 */.DS_Store
 */*/.DS_Store
 .out/

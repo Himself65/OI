@@ -1,12 +1,15 @@
-#include<iostream>
-#include<cmath>
-#define INIT                             \
+#include <cmath>
+#include <iostream>
+#define INIT                          \
     ios_base::sync_with_stdio(false); \
     cin.tie(0)
 #define ll long long
+#define lll __int128
 using namespace std;
-const int maxn = 85;
-ll map[maxn][maxn];
+const int maxn = 100 + 5;
+ll a[maxn];
+ll f[maxn][maxn];
+ll p[maxn] = {1};
 int m, n;
 
 inline int max(int a, int b)
@@ -24,34 +27,27 @@ inline int max(int a, int b, int c, int d)
     return max(a, max(b, max(c, d)));
 }
 
-inline void init() 
+inline void init()
 {
-
+    for (int i = 1; i <= 100; i++)
+        p[i] = p[i - 1] << 1;
 }
-
+ll ans;
+inline int solve()
+{
+}
 int main()
 {
-    INIT;
-    cin >> m >> n;
-    for (int i = 1; i <= m; i++)
+    scanf("%d%d", &n, &m);
+    init();
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= n;j++)
+        for (int j = 1; j <= m; j++)
         {
-            cin >> map[i][j];
+            scanf("%lld", &a[m]);
         }
+        ans += solve();
     }
-
-    ll ans = -0x7f7f7f7f;
-    for (int i = 1; i <= m; i++)
-    {
-        for (int j = 1; j <= n;j++)
-        {
-            for (int k = 1; k <= m; k++)    // m次
-            {
-                max
-            }
-        }
-    }
-
+    printf("%lld", ans);
     return 0;
 }

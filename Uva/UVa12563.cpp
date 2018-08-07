@@ -16,22 +16,19 @@ using namespace std;
     cin.tie(0);
 typedef long long ll;
 typedef unsigned long long ull;
-const int maxn = 1e+9 + 5;
-int T, n;
-ll t, ans;
-int f[maxn];
+const int maxn = 100000 + 5;
+int Ts, n, ti, t, ans, f[maxn];
 inline int max(int a, int b) { return a > b ? a : b; }
 int main()
 {
-    scanf("%d", &T);
-    while (T--)
+    scanf("%d", &Ts);
+    for (int T = 1; T <= Ts; T++)
     {
-        scanf("%d%lld", &n, &t);
+        scanf("%d%d", &n, &t);
         memset(f, 0x8f, sizeof(f));
         f[0] = 0;
         for (int i = 1; i <= n; i++)
         {
-            int ti;
             scanf("%d", &ti);
             for (int j = t - 1; j >= ti; j--)
             {
@@ -41,7 +38,7 @@ int main()
         for (int i = ans = t - 1; i >= 0; i--)
             if (f[i] > f[ans])
                 ans = i;
-        printf("Case %d: %d %lld\n", T, f[ans] + 1, ans + 678);
+        printf("Case %d: %d %d\n", T, f[ans] + 1, ans + 678);
     }
     return 0;
 }
