@@ -20,7 +20,7 @@ inline int solve(int l, int r, int who)
     else
         return f[l][r][who] = max(solve(l + 1, r, 0), solve(l, r - 1, 0));
 }
-#define LOCAL
+#define LOCALN
 int main()
 {
     scanf("%d", &n);
