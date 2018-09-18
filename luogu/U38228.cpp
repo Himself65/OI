@@ -1,3 +1,4 @@
+#define LOCAL
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -69,5 +70,7 @@ int main()
     K = (multi(K, 9, m) + 1) % m;
     ll ans = bsgs(10, K, m);
     cout << ans << endl;
+#ifdef LOCAL
     system("pause");
+#endif
 }
