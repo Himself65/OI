@@ -1,3 +1,5 @@
+#define LOCAL // For Windows
+#define TEST
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -21,6 +23,12 @@ int main()
 {
     INIT_CIN; // std::cin的优化
 
+#ifdef TEST
+    printf("Hello, world");
+#endif
+#ifdef LOCAL
+    system("pause");
+#endif
     return 0;
 }
 
