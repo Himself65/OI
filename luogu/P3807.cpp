@@ -31,7 +31,7 @@ ll a[maxn], b[maxn];
  */
 inline ll lucas(ll x, ll y)
 {
-    if (x < y)
+    if (x < y)  // 不存在
         return 0;
     else if (x < p)
         return b[x] * a[y] * a[x - y] % p;
