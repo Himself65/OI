@@ -12,7 +12,7 @@ inline ll pow_mod(ll x, ll n, ll mod)
     ll ans = 1;
     while (n)
     {
-        if (!(x & 1))
+        if (n & 1)
             ans = mul_mod(ans, x, mod);
         x = mul_mod(x, x, mod);
         n >>= 1;
@@ -21,8 +21,11 @@ inline ll pow_mod(ll x, ll n, ll mod)
 }
 int main()
 {
-    cout << pow_mod(2, 7, 1000) << endl;
-    cout << pow_mod(2, 7, 100) << endl;
+    int mod = 999983;
+    for (int i = 1; i <= 10; i++)
+    {
+        cout << pow_mod(2, i, mod) << endl;
+    }
 #ifdef LOCAL
     system("pause");
 #endif
