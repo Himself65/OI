@@ -7,7 +7,9 @@ _test/
 */*/.DS_Store
 .out/
 .local/
-# luogu中写了很久还没写好的题 
+in*.txt
+out*.txt
 
+# luogu中写了很久还没写好的题 
 luogu/P1222.cpp
 luogu/P2187.cpp

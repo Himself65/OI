@@ -21,6 +21,10 @@ typedef unsigned long long ull;
 
 int main()
 {
+#ifdef LOCAL
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
+#endif
     INIT_CIN; // std::cin的优化
 
 #ifdef TEST
