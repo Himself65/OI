@@ -13,3 +13,6 @@ out*.txt
 # luogu中写了很久还没写好的题 
 luogu/P1222.cpp
 luogu/P2187.cpp
+
+# 不给你们看
+luogu/U34498.cpp
