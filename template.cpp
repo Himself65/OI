@@ -26,7 +26,6 @@ typedef pair<int, int> pii;
 const int maxn = 1e6 + 5;
 const int INF = 0x3f3f3f3f;
 const int SUP = -0x3f3f3f3f;
-
 namespace BREAD
 {
 int n, m;

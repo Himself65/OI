@@ -1,6 +1,3 @@
-#define LOCAL // For Windows
-#define TEST
-#define HAND
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -82,18 +79,6 @@ inline void solve()
 } // namespace BREAD
 int main()
 {
-#ifdef LOCAL
-#ifdef DATA
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-#endif
-#endif
-    // INIT_CIN;
     BREAD::solve();
-#ifdef LOCAL
-#ifdef HAND
-    system("pause");
-#endif
-#endif
     return 0;
 }

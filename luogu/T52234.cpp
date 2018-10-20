@@ -1,6 +1,3 @@
-#define LOCAL // For Windows
-#define TEST
-#define HAND
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -34,12 +31,6 @@ int b[maxn];
 using namespace BREAD;
 int main()
 {
-#ifdef LOCAL
-#ifdef DATA
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-#endif
-#endif
     // INIT_CIN;
     scanf("%d%d%d", &k, &n, &m);
     for (register int i = 1; i <= n; i++)
@@ -60,10 +51,5 @@ int main()
         ans = ans + max(0, (a[i] - b[i]));
     }
     printf("%d", ans);
-#ifdef LOCAL
-#ifdef HAND
-    system("pause");
-#endif
-#endif
     return 0;
 }
