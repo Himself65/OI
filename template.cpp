@@ -1,5 +1,7 @@
 #define LOCAL // For Windows
 #define TEST
+#define DATA
+#define HAND
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -18,26 +20,33 @@ using namespace std;
     cin.tie(0);
 typedef long long ll;
 typedef unsigned long long ull;
+typedef double db;
+typedef pair<ll, ll> pll;
+typedef pair<int, int> pii;
+const int maxn = 1e6 + 5;
+const int INF = 0x3f3f3f3f;
+const int SUP = -0x3f3f3f3f;
 
+namespace BREAD
+{
+int n, m;
+} // namespace BREAD
 int main()
 {
 #ifdef LOCAL
+#ifdef DATA
     freopen("in.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
 #endif
-    INIT_CIN; // std::cin的优化
-
+#endif
+    // INIT_CIN;
 #ifdef TEST
-    printf("Hello, world");
+    printf("TEST");
 #endif
 #ifdef LOCAL
+#ifdef HAND
     system("pause");
+#endif
 #endif
     return 0;
 }
-
-// typedef double db;
-// typedef pair<ll, ll> pii;
-// const int maxn = 1000 + 5;
-// const int INF = 0x7f7f7f7f;
-// const int SUP = -0x7f7f7f7f;
