@@ -29,6 +29,24 @@ const int SUP = -0x3f3f3f3f;
 namespace BREAD
 {
 int n, m;
+template <class T>
+inline void read_int(T &x)
+{
+    char ch = getchar();
+    int op = 1;
+    while (ch < '0' || ch > '9')
+    {
+        if (ch == '-')
+            op = -1;
+        ch = getchar();
+    }
+    while ('0' <= ch && ch <= '9')
+        x = x * 10 + (ch - '0'), ch = getchar();
+    x *= op;
+}
+inline void solve()
+{
+}
 } // namespace BREAD
 int main()
 {
@@ -38,9 +56,8 @@ int main()
     freopen("out.txt", "w", stdout);
 #endif
 #endif
-    // INIT_CIN;
+    BREAD::solve();
 #ifdef TEST
-    printf("TEST");
 #endif
 #ifdef LOCAL
 #ifdef HAND
