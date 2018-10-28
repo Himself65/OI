@@ -8,6 +8,7 @@
 #include <cstring>
 #include <deque>
 #include <iostream>
+#include <list>
 #include <map>
 #include <queue>
 #include <set>
