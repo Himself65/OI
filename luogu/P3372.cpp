@@ -37,7 +37,7 @@ inline void build(ll l, ll r, ll p)
 }
 inline void f(ll l, ll r, ll p, ll k)
 {
-    tag[p] += k;    
+    tag[p] += k;
     ans[p] += k * (r - l + 1);
 }
 inline void push_down(ll l, ll r, ll p)
