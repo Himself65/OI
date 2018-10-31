@@ -48,7 +48,7 @@ inline void put_int(T x) {
   do {
     _buf[p++] = '0' + (x % 10), x /= 10;
   } while (x);
-  for (register int i = p - 1; i >= 0; --i) putchar(_buf[i]);
+  for (int i = p - 1; i >= 0; --i) putchar(_buf[i]);
 }
 inline void solve() {}
 }  // namespace BREAD
