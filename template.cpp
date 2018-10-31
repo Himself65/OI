@@ -1,5 +1,5 @@
 #define LOCAL  // For Windows
-#define TEST
+#define DEBUG
 #define DATA
 #define HAND
 #include <algorithm>
@@ -50,7 +50,7 @@ int main() {
 #endif
 #endif
   BREAD::solve();
-#ifdef TEST
+#ifdef DEBUG
 #endif
 #ifdef LOCAL
 #ifdef HAND
