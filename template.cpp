@@ -36,15 +36,19 @@ inline void read_int(T &x) {
     if (ch == '-') op = -1;
     ch = getchar();
   }
+  x = 0;
   while ('0' <= ch && ch <= '9') x = x * 10 + (ch - '0'), ch = getchar();
   x *= op;
 }
 template <class T>
 inline void put_int(T x) {
-  static char _temp[100];
-  int len = 0;
-  while (x) _temp[len++] = x % 10, x /= 10;
-  while (len) putchar('0' + _temp[--len]);
+  static char _buf[1000];
+  int p = 0;
+  if (x < 0) putchar('-'), x = -x;
+  do {
+    _buf[p++] = '0' + (x % 10), x /= 10;
+  } while (x);
+  for (register int i = p - 1; i >= 0; --i) putchar(_buf[i]);
 }
 inline void solve() {}
 }  // namespace BREAD
