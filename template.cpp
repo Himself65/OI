@@ -28,7 +28,6 @@ const int maxn = 1e6 + 5;
 const int INF = 0x3f3f3f3f;
 const int SUP = -0x3f3f3f3f;
 namespace BREAD {
-int n, m;
 template <class T>
 inline void read_int(T &x) {
   char ch = getchar();
@@ -39,6 +38,13 @@ inline void read_int(T &x) {
   }
   while ('0' <= ch && ch <= '9') x = x * 10 + (ch - '0'), ch = getchar();
   x *= op;
+}
+template <class T>
+inline void put_int(T &x) {
+  static char _temp[100];
+  int len = 0;
+  while (x) _temp[len++] = x % 10, x /= 10;
+  while (len) putchar('0' + _temp[--len]);
 }
 inline void solve() {}
 }  // namespace BREAD
