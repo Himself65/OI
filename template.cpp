@@ -40,7 +40,7 @@ inline void read_int(T &x) {
   x *= op;
 }
 template <class T>
-inline void put_int(T &x) {
+inline void put_int(T x) {
   static char _temp[100];
   int len = 0;
   while (x) _temp[len++] = x % 10, x /= 10;
