@@ -1,6 +1,6 @@
-# 项目简介
+# Solutions
 
-[![MainLanguage](https://img.shields.io/badge/MainLanguage-C%2B%2B-green.svg)](https://github.com/Himself65/OI) [![LICENSE](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/Himself65/OI/blob/master/LICENSE)
+[![MainLanguage](https://img.shields.io/badge/MainLanguage-C%2B%2B-green.svg)](https://github.com/Himself65/Solutions) [![LICENSE](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/Himself65/Solutions/blob/master/LICENSE)
 
 自己刷题时候写的题解，存在电脑上也是占空间，就放到这里吧
 
@@ -8,18 +8,8 @@
 
 [个人网站](http://himself65.com)
 
-## 文件说明
+## Contact me
 
-各个文件夹为各个OnlineJudge或比赛的题解，整合到一起方便查阅
+WebSite: [Himself65 official website](http://himself65.com)
 
-模版文件：[template.cpp](https://github.com/Himself65/OI/blob/master/template.cpp)
-
-题解文件：XXXX.cpp
-
-## 联系我
-
-WebSite: [Himself65's Blog](http://himself65.com)
-
-QQ: 761282619(扩散性百万甜面包)
-
-Gmail:himself6565@gmail.com
+G-mail:himself6565@gmail.com
