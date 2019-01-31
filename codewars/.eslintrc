@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": "standard",
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "env": {
+    "node": true
+  }
+}
