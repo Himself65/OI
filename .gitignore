@@ -9,8 +9,10 @@ _test/
 .local/
 in*.txt
 out*.txt
+node_modules
+yarn.lock
 
-# luogu中写了很久还没写好的题 
+# luogu中写了很久还没写好的题
 luogu/P1222.cpp
 luogu/P2187.cpp
 

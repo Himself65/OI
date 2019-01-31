@@ -1,0 +1,10 @@
+{
+  "name": "himself65-codewars",
+  "main": "index.js",
+  "author": "himself65",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
