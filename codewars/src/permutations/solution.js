@@ -17,7 +17,7 @@ function permutations (str) {
   return r
 }
 
-describe('should return correct value', function () {
+describe('kata: permutations', function () {
   it('should pass 1', function () {
     expect(permutations('a')).toEqual(['a'])
   })
