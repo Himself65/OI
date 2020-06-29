@@ -1,3 +1,4 @@
+// input the year:month:day, output the date which is the day of the year
 #include <stdio.h>
 int month[13] = {
     0,

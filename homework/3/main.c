@@ -1,3 +1,4 @@
+// There is a 3*4 matrix. Swap the max number in every column, and swap it with the first item on its column.
 #include <stdio.h>
 #define ROW 3
 #define COL 4

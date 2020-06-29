@@ -1,3 +1,6 @@
+// Using the array, memories the ID and score of each student.
+// Calculate the average of the score of the students who are kept in the memories.
+// Find and print the student's information who are higher than the score average.
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
