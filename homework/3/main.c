@@ -13,7 +13,7 @@ int main() {
       scanf("%d", &matrix[i][j]);
     int maxp = 0;
     for (int j = 0; j < COL; ++j)
-      if (matrix[i][j] > matrix[i][0]) maxp = j;
+      if (matrix[i][j] > matrix[i][0] && matrix[i][j] > matrix[i][maxp]) maxp = j;
     _swap(&matrix[i][0], &matrix[i][maxp]);
   }
   for (int i = 0; i < ROW; ++i) {
