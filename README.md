@@ -8,6 +8,10 @@ Would rather keep these in GitHub than in my computer for taking up space
 
 Also, share these with everyone who is learning algorithms.
 
+## Build Environment
+
+see <https://icpc.global/worldfinals/programming-environment>
+
 ## Contact me
 
 WebSite: [Himself65 official website](http://himself65.com)
