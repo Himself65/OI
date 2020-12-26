@@ -1,6 +1,6 @@
 include ./.env
 GNU-COMPILE 	=
-CGLAGS			= -g
+CFLAGS			= -g
 CC 				= $(GNU-COMPILE)g++
 
 OBJDIR 			= $(CURDIR)/../out
@@ -8,21 +8,28 @@ OBJDIR 			= $(CURDIR)/../out
 FILES 			:= Uva100.cpp
 FILES 			+= Uva107.cpp
 
-OBJ-SUFFIX		= out
-OBJS			= $(patsubst %.cpp,%.$(OBJ-SUFFIX),$(FILES))
+OBJ-SUFFIX		= o
+OBJ-FORMAT		= %.$(OBJ-SUFFIX)
+OBJS			= $(patsubst %.cpp,$(OBJ-FORMAT),$(FILES))
 
 prepare:
 	mkdir -p $(OBJDIR)
 
-TARGET 			:= $(OBJDIR)/$(TARGET).$(OBJ-SUFFIX)
-run:
-	@$(TARGET)
+TARGET 			:= $(patsubst %.cpp,$(OBJ-FORMAT),$(TARGET))
 
-%.out: %.cpp
+run: $(TARGET)
+ifneq ($(REDEFINE),1)
+	$(OBJDIR)/$(TARGET)
+else
+	@echo "redefine I/O"
+	$(OBJDIR)/$(TARGET) > $(OBJDIR)/$(OUTPUT) < $(OBJDIR)/$(INPUT)
+endif
+
+$(OBJ-FORMAT): %.cpp
 	$(CC) $(CFLAGS) -o $(OBJDIR)/$@ $^
 
+.PHONY: all clean
 all: prepare $(OBJS)
 
-.PHONY: clean
 clean:
 	-rm -rf $(OBJDIR)
