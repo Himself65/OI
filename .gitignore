@@ -12,6 +12,8 @@ out*.txt
 node_modules
 yarn.lock
 
+.env
+
 # luogu中写了很久还没写好的题
 luogu/P1222.cpp
 luogu/P2187.cpp
@@ -21,3 +23,10 @@ luogu/U34498.cpp
 luogu/T54311.cpp
 luogu/T54312.py
 luogu/T54310.cpp
+
+# deps
+gcc-7.4.0
+gcc-7.4.0.tar.gz
+
+output
+out
